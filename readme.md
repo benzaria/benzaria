@@ -29,6 +29,7 @@ I enjoy building tools, experimenting with code, and learning something new ever
 
 ## 🔧 Projects & What I'm Working On  
 - [**`overtyped`**](https://github.com/benzaria/overtyped) — an all-in-one TypeScript library featuring robust and strongly-typed **Higher-Kinded Types**, type-level **Arithmetic**, and advanced functional utilities.
+- [**`AI-Agent`**](https://github.com/benzaria/ai-agent) — AI Agent on your chating app, with full access
 - [**`RunBash`**](https://github.com/benzaria/batch-args) — run Bash and Linux binaries on Windows
 - [**`batch-args`**](https://github.com/benzaria/batch-args) — a robust and modern batch arguments handler/parser
 - [**`compile-ahk`**](https://github.com/benzaria/compile-ahk) — a better compiling experience for AutoHotkey
@@ -50,7 +51,6 @@ I love blending my medical background with programming — creating tools, autom
 
 ## 📫 Connect With Me  
 - GitHub: [github.com/benzaria](https://github.com/benzaria)
-- Email: benz.github@gmail.com  
 - Instagram: [@benz.git](https://instagram.com/benz.git)
 
 ---
