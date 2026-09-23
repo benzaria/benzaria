@@ -1,0 +1,13 @@
+param(
+    [switch]$force
+)
+
+$_force = $force ? '--force' : $null
+$date = Get-Date -Format 'dddd d/M/yy - h:mm tt'
+
+git add .
+git commit -S -m "push benzaria $date"
+git remote add origin "https://benzaria@github.com/benzaria/benzaria"
+git pull origin mucho $_force
+git push origin mucho $_force
+

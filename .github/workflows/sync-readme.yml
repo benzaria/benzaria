@@ -1,0 +1,43 @@
+name: Sync README
+
+on:
+  push:
+    branches:
+      - mucho
+    paths:
+      - README.md
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout profile repo
+        uses: actions/checkout@v4
+
+      - name: Clone site repo
+        uses: actions/checkout@v4
+        with:
+          repository: benzaria/benzaria.github.io
+          token: ${{ secrets.REPO_TOKEN }}
+          path: site
+
+      - name: Copy README
+        run: cp README.md site/README.md
+
+      - name: Commit and push
+        working-directory: site
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add README.md
+
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+
+          git commit -m "sync README from benzaria/benzaria"
+          git push
+
